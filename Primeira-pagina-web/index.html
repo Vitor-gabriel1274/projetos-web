@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vitor Gabriel · Desenvolvedor Backend Python</title>
+<style>
+:root{
+  --bg:#fafaf9; --card:#ffffff; --text:#1c1917; --muted:#78716c; --line:#e7e5e4; --accent:#2563eb;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121110; --card:#1c1917; --text:#f5f5f4; --muted:#a8a29e; --line:#292524; --accent:#60a5fa; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{--bg:#121110; --card:#1c1917; --text:#f5f5f4; --muted:#a8a29e; --line:#292524; --accent:#60a5fa; color-scheme:dark;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+main{max-width:860px;margin:0 auto;padding:0 24px}
+section{padding:64px 0 8px}
+h2{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:20px}
+a{color:inherit}
 
+nav{display:flex;justify-content:space-between;align-items:center;max-width:860px;margin:0 auto;padding:24px;font-size:.95rem}
+nav .links{display:flex;gap:20px}
+nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--text)}
+nav strong{color:var(--text)}
+
+.hero{padding:72px 0 24px;display:flex;align-items:center;gap:32px;flex-wrap:wrap-reverse}
+.hero .txt{flex:1 1 320px}
+.foto{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid var(--line);transition:transform .3s,border-color .3s}
+.foto:hover{transform:scale(1.08);border-color:var(--accent)}
+.hero small{color:var(--accent);font-weight:600}
+.hero h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.1;margin:10px 0 16px;letter-spacing:-.02em}
+.hero p{color:var(--muted);max-width:520px;font-size:1.05rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:10px 20px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-size:.95rem;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;cursor:default;text-decoration:none;display:block}
+.card:hover{transform:scale(1.05);box-shadow:0 12px 30px rgba(0,0,0,.10);border-color:var(--accent)}
+.card h3{font-size:1.05rem;margin-bottom:4px}
+.card .tag{font-size:.8rem;color:var(--accent);font-weight:600}
+.card p{color:var(--muted);font-size:.92rem;margin-top:8px}
+.card .more{max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .3s;color:var(--muted);font-size:.88rem}
+.card:hover .more{max-height:80px;opacity:1;margin-top:8px}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:8px 16px;border:1px solid var(--line);background:var(--card);border-radius:999px;font-size:.9rem;transition:transform .2s,border-color .2s}
+.chip:hover{transform:scale(1.1);border-color:var(--accent)}
+
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:72px 0 40px}
+.contact a{display:inline-block;margin:6px 10px;color:var(--text);text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .2s}
+.contact a:hover{border-color:var(--accent)}
+</style>
+</head>
+<body>
+<nav>
+  <strong>VG</strong>
+  <div class="links"><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#skills">Skills</a><a href="#experiencia">Experiência</a><a href="#contato">Contato</a></div>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="txt">
+    <small>Olá, eu sou</small>
+    <h1>Vitor Gabriel</h1>
+    <p>Desenvolvedor backend em formação, com foco em Python. Construindo meu futuro, uma linha de código por vez.</p>
+    <div class="btns">
+      <a class="btn main" href="https://github.com/Vitor-gabriel1274" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/vitor-gabriel-553520278" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="#contato">Fale comigo</a>
+    </div>
+    </div>
+    <img class="foto" src="foto.jpg" alt="Foto de perfil de Vitor Gabriel" width="150" height="150">
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <div class="grid">
+      <div class="card"><span class="tag">Formação</span><h3>ADS · CEUB</h3><p>Análise e Desenvolvimento de Sistemas, cursando desde 2026.</p><div class="more">Engenharia de software, lógica, bootcamp e banco de dados.</div></div>
+      <div class="card"><span class="tag">Objetivo</span><h3>Primeiro estágio em TI</h3><p>Busco minha primeira oportunidade na área de tecnologia.</p><div class="more">Aprendo rápido, me adapto e trabalho bem em equipe.</div></div>
+      <div class="card"><span class="tag">Local</span><h3>Paranoá · Brasília, DF</h3><p>Aberto a estágios.</p><div class="more">Inglês básico, com foco em leitura técnica.</div></div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="grid">
+      <a class="card" href="https://github.com/Vitor-gabriel1274/Projeto-1" target="_blank" rel="noopener">
+        <span class="tag">Python</span><h3>Projeto-1</h3><p>Meus primeiros códigos em Python.</p><div class="more">Ver código no GitHub →</div>
+      </a>
+      <a class="card" href="https://github.com/Vitor-gabriel1274?tab=repositories" target="_blank" rel="noopener">
+        <span class="tag">Em breve</span><h3>Mais projetos</h3><p>Novos repositórios a caminho.</p><div class="more">Veja todos os repositórios →</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="chips">
+      <span class="chip">Python</span><span class="chip">Lógica de programação</span><span class="chip">Algoritmos</span>
+      <span class="chip">Condicionais e repetição</span><span class="chip">Input / Output</span><span class="chip">Noções de backend</span>
+      <span class="chip">Noções de banco de dados</span><span class="chip">Raciocínio lógico</span><span class="chip">Aprendizado rápido</span>
+      <span class="chip">Trabalho em equipe</span><span class="chip">Atendimento ao cliente</span>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiência</h2>
+    <div class="grid">
+      <div class="card"><span class="tag">2025 – hoje</span><h3>Mbox · Estagiário</h3><p>Marketing, negociações e atendimento.</p><div class="more">Organização do ambiente e cadastro de produtos.</div></div>
+      <div class="card"><span class="tag">2022 – 2024</span><h3>Ultrabox / ISBET · Aprendiz</h3><p>Organização de produtos e apoio aos clientes.</p><div class="more">Treinava novos contratados e aprendia várias habilidades.</div></div>
+      <div class="card"><span class="tag">2022 – 2024</span><h3>Cursos técnicos · ISBET</h3><p>Informática, marketing digital e vendas.</p><div class="more">Também logística, varejo e relacionamento com o cliente.</div></div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <div class="contact">
+      <a href="mailto:sdmvitorgabriel@gmail.com">sdmvitorgabriel@gmail.com</a>
+      <a href="https://www.linkedin.com/in/vitor-gabriel-553520278" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Vitor-gabriel1274" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/vitor_gabriel.bsb" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Vitor Gabriel</footer>
+</body>
+</html>
